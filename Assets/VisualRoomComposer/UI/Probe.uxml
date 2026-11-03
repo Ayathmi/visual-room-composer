@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="probe-root" class="workspace">
+        <ui:VisualElement class="toolbar">
+            <ui:Label text="visual-room-composer" class="title" />
+            <ui:Label text="Windows / VRC-01" class="muted" />
+        </ui:VisualElement>
+        <ui:VisualElement class="body">
+            <ui:VisualElement class="stage">
+                <ui:Label text="房间构件 · Model preview" class="subtitle" />
+                <ui:Image name="viewport" class="viewport" />
+            </ui:VisualElement>
+            <ui:VisualElement class="panel">
+                <ui:Label text="可行性工作区" class="subtitle" />
+                <ui:Label text="引擎、文件与模型探针" class="muted" />
+                <ui:TextField name="model-name" label="名称 / Name" value="原创房间 Room" />
+                <ui:Button name="open" text="打开模型 / Open model" />
+                <ui:Button name="export" text="导出 FBX / Export FBX" class="primary" />
+                <ui:Label name="status" text="VRC-01 · 环境探针" class="status" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

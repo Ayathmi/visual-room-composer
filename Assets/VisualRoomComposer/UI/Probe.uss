@@ -1,0 +1,15 @@
+.workspace { flex-grow: 1; background-color: #000000; color: #f5f5f7; font-size: 17px; padding: 16px; }
+.toolbar { flex-direction: row; align-items: center; justify-content: space-between; padding: 12px; margin-bottom: 16px; }
+.title { font-size: 28px; -unity-font-style: bold; }
+.subtitle { font-size: 21px; margin-bottom: 16px; }
+.muted { color: #cccccc; white-space: normal; }
+.body { flex-direction: row; flex-grow: 1; }
+.stage { flex-grow: 1; background-color: #1d1d1f; border-radius: 28px; padding: 24px; margin-right: 16px; }
+.viewport { flex-grow: 1; min-height: 200px; }
+.panel { width: 320px; background-color: #1d1d1f; border-radius: 28px; padding: 24px; }
+Button { background-color: #333336; color: #ffffff; border-width: 0; border-radius: 20px; min-height: 40px; margin-top: 12px; padding-left: 16px; padding-right: 16px; }
+Button:focus { border-width: 2px; border-color: #2997ff; }
+.primary { background-color: #0071e3; }
+.status { white-space: normal; margin-top: 24px; color: #cccccc; }
+TextField { margin-top: 24px; }
+TextField .unity-base-text-field__input { background-color: #333336; color: #f5f5f7; border-radius: 10px; padding: 8px; }

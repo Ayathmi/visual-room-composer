@@ -1,0 +1,8 @@
+{
+  "name": "VisualRoomComposer.Core",
+  "rootNamespace": "VisualRoomComposer.Core",
+  "references": [],
+  "autoReferenced": true,
+  "noEngineReferences": true,
+  "allowUnsafeCode": false
+}

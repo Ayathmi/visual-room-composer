@@ -20,6 +20,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+/Validation/
 /[Uu]ser[Ss]ettings/
 *.log
 
@@ -112,3 +113,6 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Agent Tools
+/[Tt]ools
