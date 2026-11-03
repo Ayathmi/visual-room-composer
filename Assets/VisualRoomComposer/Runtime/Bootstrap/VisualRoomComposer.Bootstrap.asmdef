@@ -1,1 +1,1 @@
-{"name":"VisualRoomComposer.Bootstrap","rootNamespace":"VisualRoomComposer.Bootstrap","references":["VisualRoomComposer.Infrastructure","VisualRoomComposer.Core","VisualRoomComposer.Presentation","VisualRoomComposer.Formats"],"autoReferenced":true}
+{"name":"VisualRoomComposer.Bootstrap","rootNamespace":"VisualRoomComposer.Bootstrap","references":["VisualRoomComposer.Infrastructure","VisualRoomComposer.Core","VisualRoomComposer.Application","VisualRoomComposer.Presentation","VisualRoomComposer.Formats"],"autoReferenced":true}

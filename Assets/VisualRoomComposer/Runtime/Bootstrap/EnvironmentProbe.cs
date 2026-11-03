@@ -32,7 +32,7 @@ namespace VisualRoomComposer.Bootstrap
 
         private void OnEnable()
         {
-            Application.runInBackground = true;
+            UnityEngine.Application.runInBackground = true;
             Debug.Log("VRC_ENV_START");
             panel = GetComponent<PanelRenderer>();
             panel.RegisterUIReloadCallback(Bind);
@@ -77,10 +77,10 @@ namespace VisualRoomComposer.Bootstrap
             if (root != null) root.Q<Image>("viewport").image = target;
             for (var i = 0; i < 5; i++) yield return null;
             if (!Environment.GetCommandLineArgs().Contains("--vrc-probe")) yield break;
-            report.unity = Application.unityVersion;
-            report.platform = Application.platform.ToString();
+            report.unity = UnityEngine.Application.unityVersion;
+            report.platform = UnityEngine.Application.platform.ToString();
             report.machine = SystemInfo.operatingSystem + "; " + SystemInfo.processorType + "; " + SystemInfo.graphicsDeviceName;
-            var output = Argument("--vrc-output") ?? Path.Combine(Application.persistentDataPath, "probe");
+            var output = Argument("--vrc-output") ?? Path.Combine(UnityEngine.Application.persistentDataPath, "probe");
             Directory.CreateDirectory(output);
             Check("ENV-UI-ROOT", () => root != null && root.Q("probe-root").worldBound.width > 100);
             Check("ENV-UI-FONT", () => font != null && font.HasCharacter('房'));
@@ -138,7 +138,7 @@ namespace VisualRoomComposer.Bootstrap
             var fixtures = Argument("--vrc-fixtures");
             if (fixtures != null)
             {
-                var evidenceEnvironment = "WindowsPlayer " + Application.unityVersion;
+                var evidenceEnvironment = "WindowsPlayer " + UnityEngine.Application.unityVersion;
                 var fbxTask = Task.Run(() => FbxProbe.Run(fixtures, Path.Combine(output, "fbx-outputs"), evidenceEnvironment));
                 while (!fbxTask.IsCompleted) yield return null;
                 Check("FBX-PLAYER-READ-WRITE", () => fbxTask.GetAwaiter().GetResult().Cases.Length == Directory.GetFiles(fixtures, "*.fbx").Length && fbxTask.Result.Cases.Length >= 4 && fbxTask.Result.Cases.All(c => c.Status == "Produced"));
@@ -194,7 +194,7 @@ namespace VisualRoomComposer.Bootstrap
             report.passed = report.cases.All(c => c.passed);
             File.WriteAllText(Path.Combine(output, "environment-result.json"), JsonUtility.ToJson(report, true));
             Debug.Log("VRC_ENV_RESULT " + report.passed);
-            Application.Quit(report.passed ? 0 : 1);
+            UnityEngine.Application.Quit(report.passed ? 0 : 1);
         }
 
         private void Check(string id, Func<bool> action)

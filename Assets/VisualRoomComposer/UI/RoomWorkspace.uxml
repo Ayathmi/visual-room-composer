@@ -1,0 +1,49 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="workspace" class="workspace">
+        <ui:VisualElement class="header">
+            <ui:Label text="visual-room-composer" class="title" />
+            <ui:Label name="document-state" text="新建房间" class="muted" />
+            <ui:Button name="undo" text="撤销" />
+            <ui:Button name="redo" text="重做" />
+            <ui:Button name="save" text="保存工程" />
+            <ui:Button name="reopen" text="重新打开" />
+            <ui:Button name="export" text="导出 FBX" class="primary" tooltip="FBX导出尚未就绪" enabled="false" />
+        </ui:VisualElement>
+        <ui:VisualElement class="body">
+            <ui:VisualElement class="tools">
+                <ui:Button name="select" text="选择" />
+                <ui:Button name="brush" text="笔刷" />
+                <ui:Button name="rectangle" text="填充" />
+                <ui:Button name="clear" text="清除" />
+                <ui:Button name="rotate" text="旋转90°" />
+                <ui:Button name="delete" text="删除" />
+                <ui:Button name="cancel" text="取消操作" />
+                <ui:Button name="frame" text="查看全景" />
+            </ui:VisualElement>
+            <ui:VisualElement class="stage">
+                <ui:Image name="viewport" class="viewport" focusable="true" />
+                <ui:Label name="selection-state" text="选择构件，或用笔刷在地面搭建" class="hint" />
+            </ui:VisualElement>
+            <ui:ScrollView class="inspector">
+                <ui:Label text="房间构件" class="subtitle" />
+                <ui:DropdownField name="definition" label="构件" />
+                <ui:DropdownField name="room" label="房间" />
+                <ui:TextField name="project-name" label="工程名称" />
+                <ui:VisualElement name="placements" class="placement-list" />
+                <ui:Label text="墙比例" class="subtitle" />
+                <ui:FloatField name="scale-x" label="宽" value="1" />
+                <ui:FloatField name="scale-y" label="高" value="1" />
+                <ui:FloatField name="scale-z" label="厚" value="1" />
+                <ui:Button name="apply-scale" text="应用墙比例" />
+                <ui:Label text="移动选择" class="subtitle" />
+                <ui:Button name="move-left" text="← 0.25 m" />
+                <ui:Button name="move-right" text="→ 0.25 m" />
+                <ui:Button name="move-forward" text="↑ 0.25 m" />
+                <ui:Button name="move-back" text="↓ 0.25 m" />
+                <ui:Label text="作者诊断" class="subtitle" />
+                <ui:Label name="diagnostics" class="muted wrap" />
+                <ui:Label name="status" class="wrap" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

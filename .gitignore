@@ -116,3 +116,13 @@ InitTestScene*.unity*
 
 # Agent Tools
 /[Tt]ools
+/[Tt]ools/*
+
+# Docs
+/[Aa]ssets/[Dd]ocs/*.*
+/[Aa]ssets/[Dd]ocs/*
+/[Aa]ssets/[Dd]ocs/batch_logs/*
+/[Aa]ssets/[Dd]ocs/batch_logs/*.*
+
+# Packages
+/[Pp]ackages/*/*
